@@ -1,7 +1,7 @@
 <template>
     <div class="head">
-      <a href="#" class="head-left"><</a>
-      <a href="#" class="head-mid"><span></span>输入城市/景点/游玩主题</a>
+      <a href="#" class="head-left iconfont icon-back"></a>
+      <a href="#" class="head-mid"><span class="iconfont icon-sousuo"></span>输入城市/景点/游玩主题</a>
       <a href="#" class="head-right">北京</a>
     </div>
 </template>
@@ -33,9 +33,9 @@
     line-height: .88rem;
     padding: 0 .2rem;
     color: #fff;
-    font-size: .36rem;
+    font-size: .5rem;
     text-align: left;
-    
+    font-weight: 700;
   }
   .head-mid{
   	box-sizing: border-box;
@@ -48,12 +48,16 @@
     line-height: .6rem;
     border-radius: .06rem;
     color:#e4e7ea;
+    text-align:left;
+  }
+  span{
+    margin: 0 .1rem;
   }
   .head-right{
     line-height: .88rem;
     margin-right: .04rem;
     color: #fff;
-    padding: 0 .45rem 0 .4rem;
+    padding: 0 .5rem 0 .25rem;
     position: relative;
   }
   .head-right:after{
@@ -65,6 +69,6 @@
     border-right:.12rem solid transparent;
     border-top:.12rem solid #fff;
     top:18px;
-    right:4px;
+    right:10px;
    }
 </style>

@@ -1,20 +1,26 @@
 <template>
-  <div class="hello">
-    <indexheader/>
+  <div class="home">
+    <index-header/>
+    <index-banner/>
+    <index-entertain/>
+    <index-middle/>
+    <index-main/>
   </div>
 </template>
 
 <script>
 import header from "./header.vue";
+import banner from "./banner.vue";
+import entertain from "./entertain.vue";
+import middle from "./middle.vue";
+import main from "./main.vue";
 export default {
-	name:'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },
   components: {
-  	indexheader : header
+    "index-header" : header,
+  	"index-banner" : banner,
+    "index-entertain" : entertain,
+    "index-middle" : middle ,
+    "index-main" : main ,
   }
 }
 </script>

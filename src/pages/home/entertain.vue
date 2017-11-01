@@ -116,6 +116,10 @@
 
 
 <style scoped>
+  #entertain {
+    background: #fff;
+  }
+
   #entertain .swiper-scrollbar {
     z-index: -1 ;
   }

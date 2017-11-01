@@ -67,8 +67,4 @@
     width:100%;
     height:2.3rem;
   }
-
- #banner .swiper-pagination-bullet-active{
-    background:rgba(255,255,255,.8);
- }
 </style>
