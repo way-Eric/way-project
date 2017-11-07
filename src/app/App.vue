@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" ref="handleClickDocument">
     <router-view/>
   </div>
 </template>

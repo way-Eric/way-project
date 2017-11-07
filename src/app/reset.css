@@ -39,16 +39,4 @@ a {color: #25a4bb;text-decoration: none;}
 	}
 }
 
- #banner .swiper-pagination-bullet-active{
-    background:rgba(255,255,255,.8);
- }
-
-#entertain .swiper-pagination-bullet-active{
-    background: rgba(0,175,190,.8)
- }
-
- body {
- 	background: #f5f5f5 ;
- }
-
  
