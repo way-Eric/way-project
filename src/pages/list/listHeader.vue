@@ -90,6 +90,7 @@
 	background:#fff;
 	border-bottom:1px solid #dde1e3;
 	padding:.2rem;
+	z-index: 2;
 }
 .search-con{
 	height:100%;

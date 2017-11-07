@@ -1,6 +1,8 @@
 <template>
 	<div>
+		<div class="box">
 		<div class="list-menu" ref="menu" :class="{active:isActive}">
+			
 			<div class="menu-con">
 				<div class="menu-left" v-on:click="handleClickMenuLeft">全部分类</div>
 				<div class="menu-right" v-on:click="handleClickMenuRight">人气最高</div>
@@ -38,6 +40,7 @@
 					</ul>
 				</div>
 			</div>
+		</div>
 	</div>
 		
 	</div>
@@ -53,6 +56,7 @@
 		},
 		methods: {
 			handleClickMenuLeft(){
+				this.showr = false
 				if(this.showl){
 					this.showl = false
 				} else{
@@ -61,6 +65,7 @@
 
 			},
 			handleClickMenuRight(){
+				this.showl = false
 				if(this.showr){
 					this.showr = false
 				} else{
@@ -93,6 +98,9 @@
 	}
 </script>
 <style scoped>
+.box{
+	height:.8rem;
+}
 .active{
 	position:fixed;
 	top:0;

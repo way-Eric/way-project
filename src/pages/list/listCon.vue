@@ -1,6 +1,7 @@
 <template>
 	<div class="item-con">
-		<div class="list-info" v-for="item in listInfo" :key="item.id">
+        <paginate class="view-list page" ref="paginator" name="listInfo" :list="listInfo" :per="per">
+		<div class="list-info" v-for="(item, index) in paginated('listInfo')" :key="item.id">
 			<div class="list-info-con">
 				<div class="list-info-title">
 					<div class="title-left">
@@ -31,13 +32,63 @@
 					<span>&yen; <em>{{item.priceSec}}</em></span>
 				</div>
 		</div>
+        </paginate>
+        <div class="moreinfo">
+            <div class="pagination">
+                <a @click="prevPage" class="linkPage">上一页</a>
+                <span v-if="$refs.paginator" ref="pageNumber" class="page-num" :val="pageNum">
+                    {{pageNum}}
+                </span>
+                <a @click="textPage" class="linkPage">下一页</a>
+            </div>
+        </div>
 	</div>	
 </template>
 <script>
     import {Paginate, PaginateLinks} from 'vue-paginate'
+   
 	export default{
+       
+        methods: {
+            prevPage () {
+
+                if (this.$refs.paginator) {
+                    var current = this.pageNum;
+                    if(current > 1) {
+                        this.$refs.paginator.goToPage(this.pageNum-1);
+                    }
+                }
+
+            },
+            textPage () {
+                if (this.$refs.paginator) {
+                    var num = parseInt(this.listInfo.length/this.per)+1;
+                    var current = this.pageNum;
+                    if(current < num) {
+                        this.$refs.paginator.goToPage(this.pageNum+1);
+                    }
+                }
+                //console.log(this.$refs.paginator.pageItemsCount)
+            }
+        },
+        computed: {
+            pageNum: function() {
+                return parseInt(parseInt(this.$refs.paginator.pageItemsCount)/this.per)+1
+            } 
+        },
         props:["listInfo"],
-            
+        data () {
+            return {
+                isAction: this.pre,
+                per: 10,
+                paginate: ['listInfo']
+            }
+        }, 
+        ready() {
+           document.addEventListener('click', (e) => {
+               if (!this.$el.contains(e.target)) this.showl = false
+           })
+        }
     }
 </script>
 <style scoped>
@@ -188,4 +239,35 @@
 .ticket-sec-con span em{
     font-size: .36rem;
 }
+.moreinfo {
+        padding-bottom: .2rem;
+        color: #00afc7;
+        text-align: center;
+        line-height: .7rem;
+        background: #f5f5f5;
+    }
+    .linkPage {
+        display: inline-block;
+        width: 1.4rem;
+        border: .02rem solid #00afc7;
+        background: #fff;
+        color: #00afc7;
+        line-height: .6rem;
+        border-radius: .06rem;
+    }
+    .disablePage {
+        background: #bdbdbd;
+        color: #fff;
+        border: 0;
+    }
+    .page-num {
+        color: #212121;
+        line-height: .6rem;
+        padding: 0 15px;
+    }
+    .page-text {
+        padding-top: .2rem;
+        line-height: .3rem;
+        font-size: .3rem;
+    }
 </style>
