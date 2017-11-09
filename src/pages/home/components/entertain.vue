@@ -16,8 +16,8 @@
           <a href="#" class="mp-category-title">故宫</a>
         </div>
         <div class="mp-category mpL">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png" alt=""></a>
-          <a href="#" class="mp-category-title">一日游</a>
+          <router-link to="/tourism" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png" alt=""></router-link>
+          <router-link to="/tourism" class="mp-category-title">一日游</router-link>
         </div>
         <div class="mp-category mpR">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png" alt=""></a>
@@ -77,8 +77,12 @@
 </template>
 
 <script>
-
+    import {swiper , swiperSlide} from 'vue-awesome-swiper'
     export default {
+      components: {
+        swiper ,
+        swiperSlide
+      },
       name: 'carrousel',
       data() {
         return {
