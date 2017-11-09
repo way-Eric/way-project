@@ -11,26 +11,26 @@
       <h2>热门城市</h2>
       <div class="content">   
         <div class="hot-city">
-          <div class="little" v-for="item in abroadInfo.items" key="index">
+          <div class="little" v-for="item in abroad.items" key="index">
             <li class="item-con">{{item}}</li>
           </div>
         </div>
       </div>
-      <div v-for="(city,index) in abroadInfo.citys" :key="index">
+      <div v-for="(city,index) in abroad.citys" :key="index">
         <h2 :id="'city'+city.id">{{city.id}}</h2>
         <ul class="cityA">
-          <li class="item" v-for="area in abroadInfo.citys[index].areas" :key="area.id">{{area.name}}</li>
+          <li class="item" v-for="area in abroad.citys[index].areas" :key="area.id">{{area.name}}</li>
         </ul>
       </div>
       <div class="grapheme">
-        <a :href="'#city'+Letter" v-for="Letter in abroadInfo.Letters">{{Letter}}</a>
+        <a :href="'#city'+Letter" v-for="Letter in abroad.Letters">{{Letter}}</a>
       </div>
     </div>
 </template>
 
 <script>
   export default {
-    props: ['abroadInfo']
+    props: ['abroad']
   }
 </script>
 

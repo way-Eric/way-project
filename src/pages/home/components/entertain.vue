@@ -4,7 +4,7 @@
       <!-- slides -->
       <swiper-slide>
         <div class="mp-category mpL">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png" alt=""></a>
+          <router-link to="/list" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png" alt=""></router-link>
           <a href="#" class="mp-category-title">景点门票</a>
         </div>
         <div class="mp-category mpL">

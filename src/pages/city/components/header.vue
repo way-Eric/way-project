@@ -14,8 +14,8 @@
         <input type="text" placeholder="请输入城市名或拼音" />
       </div>     
     </div>
-    <city-domestic v-if="show" :domesticInfo="domesticInfo"/>
-    <city-abroad v-if="show2" :abroadInfo="abroadInfo"/>
+    <city-domestic v-if="show" :domestic="domestic"/>
+    <city-abroad v-if="show2" :abroad="abroad"/>
   </div>
 </template>
 
@@ -23,18 +23,25 @@
   import domestic from "./domestic.vue";
   import abroad from "./abroad.vue";
   import axios from "axios" ;
+  import { AJAX_GET_DATA } from "../types.js" 
   export default {
     data() {
       return {
         show:true,
-        show2:false,
-        domesticInfo: [],
-        abroadInfo: []
+        show2:false
       }
     },
     components: {
-      "city-domestic": domestic ,
-      "city-abroad": abroad 
+      "city-domestic": domestic,
+      "city-abroad": abroad
+    },
+    computed:{
+      domestic() {
+        return this.$store.state.city.domestic
+      },
+      abroad() {
+        return this.$store.state.city.abroad
+      }
     },
     mounted() {
       this.getCityDate();
@@ -57,17 +64,7 @@
         this.$refs.li2.style.color = "#00bcd4" ;
       },
       getCityDate() {
-        axios.get('/static/city.json')
-        .then(this.handleGetSucc.bind(this))
-        .catch(this.handleGetErr.bind(this))
-      },
-      handleGetSucc(response) {
-        const res = response.data ;
-        this.domesticInfo = res.data.domestic ;
-        this.abroadInfo = res.data.abroad;
-      },
-      handleGetErr(err) {
-        console.log(err)
+        this.$store.dispatch(AJAX_GET_DATA);
       }
     }
 

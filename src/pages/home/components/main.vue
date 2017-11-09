@@ -3,7 +3,7 @@
       <h2>热销推荐</h2>
       <ul class="hot">
         <li class="hot-con">
-          <a href="#" class="hotL"><img src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg" alt="故宫"></a>
+          <router-link to="/list" class="hotL"><img src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg" alt="故宫"></router-link>
           <div class="hotR">
             <h3>故宫</h3>
             <h4>东方宫殿建筑代表，世界宫殿建筑典范</h4>

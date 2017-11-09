@@ -5,6 +5,7 @@ import Search from '@/pages/search/search'
 import City from '@/pages/city/city'
 import Reserve from '@/pages/reserve/reserve'
 import Tourism from '@/pages/tourism/tourism'
+import List from '@/pages/list/List'
 
 Vue.use(Router)
 
@@ -34,6 +35,10 @@ export default new Router({
       path: '/tourism',
       name: 'Tourism',
       component: Tourism
-    } 
+    },{
+	    path: '/list',
+	    name: 'List',
+	    component: List
+    }
   ]
 })
