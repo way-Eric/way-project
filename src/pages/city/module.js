@@ -12,6 +12,7 @@ export default {
 		[ABR_DATA](state,payload) {
 			state.abroad = payload
 		}
+
 	},
 	actions: {
 		[AJAX_GET_DATA](context) {
@@ -20,10 +21,7 @@ export default {
 	          	context.commit(DOM_DATA,response.data.data.domestic)
 	          	context.commit(ABR_DATA,response.data.data.abroad)
 	          })
-	    },
-	},
-	getter: {
-
+	    }
 	}
 
 }

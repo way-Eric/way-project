@@ -59,7 +59,7 @@
     },
     methods: {
       handleScroll() {
-        var scrollTop = window.pageYOffste || document.documentElement.scrollTop || document.body.scrollTop;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
         if(scrollTop <= 446) {
           this.isActive = false
         }else {

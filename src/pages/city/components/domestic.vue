@@ -12,14 +12,17 @@
       <div class="content">   
         <div class="hot-city">
           <div class="little" v-for="item in domestic.items" key="index">
-            <li class="item-con">{{item}}</li>
+           <router-link to="/">
+              <li class="item-con" @click="handleItemClick(item)">{{item}}
+              </li> 
+           </router-link>
           </div>
         </div>
       </div>
       <div v-for="(city,index) in domestic.citys" :key="index">
         <h2 :id="'city'+city.id">{{city.id}}</h2>
         <ul class="cityA">
-          <li class="item" v-for="area in domestic.citys[index].areas" :key="area.id">{{area.name}}</li>
+          <li class="item" v-for="area in domestic.citys[index].areas" @click="handleItemClick(area.name)" :key="area.id"><router-link to="/">{{area.name}}</router-link></li>
         </ul>
       </div>
       <div class="grapheme">
@@ -31,7 +34,12 @@
 
 <script>
   export default {
-    props:['domestic']
+    props:['domestic'],
+    methods: {
+       handleItemClick(val) {
+          this.$store.commit('setCity',val)
+       }
+    }
   }
 </script>
 
@@ -65,6 +73,9 @@
     color: #212121;
     border: .02rem solid #c9cccd;
     border-radius: .06rem;
+  }
+  .item a {
+    color: #666;
   }
   .hot-city {
     overflow: hidden;
