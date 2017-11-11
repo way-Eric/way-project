@@ -1,11 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/home/Home'
+import Home from '@/pages/Home/Home'
 import Search from '@/pages/search/search'
-import City from '@/pages/city/city'
-import Reserve from '@/pages/reserve/reserve'
-import Tourism from '@/pages/tourism/tourism'
-import List from '@/pages/list/List'
+
 
 Vue.use(Router)
 
@@ -18,27 +15,9 @@ export default new Router({
     },
     {
       path: '/search',
-      name: 'Search',
+      name: 'search',
       component: Search
-    },
-    {
-      path: '/city',
-      name: 'City',
-      component: City
-    },
-    {
-      path: '/reserve',
-      name: 'Reserve',
-      component: Reserve
-    },
-    {
-      path: '/tourism',
-      name: 'Tourism',
-      component: Tourism
-    },{
-	    path: '/list',
-	    name: 'List',
-	    component: List
     }
+    
   ]
 })
