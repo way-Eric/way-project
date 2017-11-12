@@ -1,17 +1,31 @@
 <template>
     <div class="head">
       <a href="#" class="head-left iconfont icon-back"></a>
-        <router-link to="/search" class="head-mid">
-          <span class="iconfont icon-sousuo"></span>
-          输入城市/景点/游玩主题
-        </router-link>
-      <a href="#" class="head-right">北京</a>
+      <router-link to="/search"class="head-mid"><span class="iconfont icon-sousuo"></span>输入城市/景点/游玩主题</router-link>
+      <router-link to="/city" class="head-right">{{city}}</router-link>
     </div>
 </template>
 
 
 <script>
-	
+  import { mapState } from 'vuex'
+	export default {
+    computed: mapState({
+      city (state) {
+        return state.home.city;
+      }
+    }),
+    mounted() {
+      if(localStorage) {
+        this.$store.state.home.city = localStorage.city
+      }
+    },
+    beforeMount() {
+      if(localStorage.length == 0) {
+        localStorage.city = "北京" 
+      }   
+    }
+  }
 </script>
 
 

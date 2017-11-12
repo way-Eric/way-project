@@ -1,0 +1,111 @@
+{
+	"ret": true,
+	"data": {
+		"swiperInfo": [{
+						"id": 1,
+						"src": "http://img1.qunarzz.com/piao/fusion/1609/c9/cacbf705c5417e02.jpg_640x200_99b2676a.jpg",
+						"link": "/list"
+					},{
+						"id": 2,
+						"src": "http://img1.qunarzz.com/piao/fusion/1710/f5/57137c621d75ba02.jpg_640x200_b984ddf7.jpg",
+						"link": "/list"
+					},{
+						"id": 3,
+						"src": "http://img1.qunarzz.com/piao/fusion/1609/f3/52a119dbed871902.jpg_640x200_b4573df8.jpg",
+						"link": "/list"
+					},{
+						"id": 4,
+						"src": "http://img1.qunarzz.com/piao/fusion/1609/c9/cacbf705c5417e02.jpg_640x200_99b2676a.jpg",
+						"link": "/list"
+					},{
+						"id": 5,
+						"src": "http://img1.qunarzz.com/piao/fusion/1707/90/2ab6fd356529aa02.jpg_640x200_5a7251a0.jpg",
+						"link": "/list"
+					},{
+						"id": 6,
+						"src": "http://img1.qunarzz.com/piao/fusion/1710/16/249e5d9c533f6e02.jpg_640x200_9d63493e.jpg",
+						"link": "/list"
+					}],
+		"spotInfo": [{
+						"id": 1,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+						"link": "./list",
+						"title": "景点门票"
+					},{
+						"id": 2,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
+						"link": "./list",
+						"title": "动植物园"
+					},{
+						"id": 3,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png",
+						"link": "./list",
+						"title": "故宫"
+					},{
+						"id": 4,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
+						"link": "./daytour",
+						"title": "一日游"
+					},{
+						"id": 5,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
+						"link": "./list",
+						"title": "必游榜单"
+					},{
+						"id": 6,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/6d/ee9eb965690ce402.png",
+						"link": "./list",
+						"title": "秋色美"
+					},{
+						"id": 7,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
+						"link": "./list",
+						"title": "游乐场"
+					},{
+						"id": 8,
+						"src": "http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
+						"link": "./list",
+						"title": "泡温泉"
+					},{
+						"id": 9,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png",
+						"link": "./list",
+						"title": "城市观光"
+					},{
+						"id": 10,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/29/c16cd064d85d8502.png",
+						"link": "./list",
+						"title": "玻璃栈道"
+					},{
+						"id": 11,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/1c/a8a8d9023a814c02.png",
+						"link": "./list",
+						"title": "名胜古迹"
+					},{
+						"id": 12,
+						"src": "https://img1.qunarzz.com/piao/fusion/1602/f2/71eb19f77e3f21f7.png",
+						"link": "./list",
+						"title": "周边游"
+					},{
+						"id": 13,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/cd/07f33cc087f18d02.png",
+						"link": "./list",
+						"title": "自然风光"
+					},{
+						"id": 14,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/ea/8cb1dce519375d02.png",
+						"link": "./list",
+						"title": "古北水镇"
+					},{
+						"id": 15,
+						"src": "http://img1.qunarzz.com/piao/fusion/1707/34/9285073fde1eb702.png",
+						"link": "./list",
+						"title": "景点讲解"
+					},{
+						"id": 16,
+						"src": "http://img1.qunarzz.com/piao/fusion/1611/be/a70e61e1f57ee302.png",
+						"link": "./list",
+						"title": "全部"
+					}]
+	}
+}
