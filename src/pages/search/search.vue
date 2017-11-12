@@ -1,23 +1,25 @@
 <template>
-  <div class="search">
-    <index-header/>
-    <index-main/>
-  </div>
+    <div class="search">
+        <searchheader/>
+        <searchhotlist/>
+    </div>
 </template>
 
 <script>
-import header from "./header.vue" ;
-import main from "./main.vue" ;
-import axios from "axios" ;
-export default {
-  components: {
-    "index-header" : header,
-    "index-main" : main 
-  },
-  data() {
-  	
-  }
-}
+    import searchheader from './header.vue';
+    import searchhotlist from './hotlist.vue';
+    export default {
+        name:'HelloWorld',
+        data () {
+            return {
+            msg: ''
+            }
+        },
+        components: {
+            searchheader: searchheader,
+            searchhotlist: searchhotlist
+        }
+    }
 </script>
 
 <style scoped>

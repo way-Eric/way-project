@@ -2,82 +2,19 @@
     <div id="entertain">
       <swiper :options="swiperOption" :not-next-tick="notNextTick" ref="mySwiper">
       <!-- slides -->
-      <swiper-slide>
-        <div class="mp-category mpL">
-          <router-link to="/list" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png" alt=""></router-link>
-          <a href="#" class="mp-category-title">景点门票</a>
-        </div>
-        <div class="mp-category mpL">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png" alt=""></a>
-          <a href="#" class="mp-category-title">动植物园</a>
-        </div>
-        <div class="mp-category mpL">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png" alt=""></a>
-          <a href="#" class="mp-category-title">故宫</a>
-        </div>
-        <div class="mp-category mpL">
-          <router-link to="/tourism" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png" alt=""></router-link>
-          <router-link to="/tourism" class="mp-category-title">一日游</router-link>
-        </div>
-        <div class="mp-category mpR">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png" alt=""></a>
-          <a href="#" class="mp-category-title">必游榜单</a>
-        </div>
-        <div class="mp-category mpR">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/6d/ee9eb965690ce402.png" alt=""></a>
-          <a href="#" class="mp-category-title">美色秋</a>
-        </div>
-        <div class="mp-category mpR">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png" alt=""></a>
-          <a href="#" class="mp-category-title">游乐场</a>
-        </div>
-        <div class="mp-category mpR">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png" alt=""></a>
-          <a href="#" class="mp-category-title">泡温泉</a>
+      <swiper-slide v-for="items in result" :key="index" class="mp-swiper">
+        <div class="mp-category" :class="item.class" v-for="item in items" :key="item.id">
+          <router-link :to="item.link" class="mp-category-img"><img :src="item.src" alt=""></router-link>
+          <a href="#" class="mp-category-title">{{item.title}}</a>
         </div>
       </swiper-slide>
-      <swiper-slide>
-        <div class="mp-category mpL">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
-        </div>
-        <div class="mp-category mpL">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
-        </div>
-        <div class="mp-category mpL">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
-        </div>
-        <div class="mp-category mpL">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
-        </div>
-        <div class="mp-category mpR">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
-        </div>
-        <div class="mp-category mpR">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/6d/ee9eb965690ce402.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
-        </div>
-        <div class="mp-category mpR">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
-        </div>
-        <div class="mp-category mpR">
-          <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
-        </div>
-      </swiper-slide>
-      <!-- Optional controls -->
-      <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
   </div>
 </template>
 
 <script>
     import {swiper , swiperSlide} from 'vue-awesome-swiper'
+    import axios from 'axios'
     export default {
       components: {
         swiper ,
@@ -101,12 +38,38 @@
             onTransitionStart (swiper) {
               console.log(swiper)
             }
-          }
+          },
+          result:[],
         }
+      },
+      mounted() {
+        this.getSwiperData()
       },
       computed: {
         swiper() {
           return this.$refs.mySwiper.swiper
+        }   
+      },
+      methods: {
+        getSwiperData() {
+          axios.get('/static/index.json')
+              .then(this.handleGetDataSucc.bind(this))
+              .catch(this.handleGetDataErr.bind(this))
+        },
+        handleGetDataSucc(response) {
+          const a = [];
+          response.data.data.spotInfo.forEach((value,index) => {
+            let page = Math.floor(index / 8);
+            if(!a[page]) {
+              a[page] = []
+            }
+            a[page].push(value)
+          })
+          this.result = a ;
+          return this.result ;
+        },
+        handleGetDataErr(err) {
+          console.log(err)
         }
       }
     }
@@ -116,6 +79,7 @@
 <style scoped>
   #entertain {
     background: #fff;
+    min-height: 3.5rem;
   }
 
   #entertain .swiper-scrollbar {
@@ -145,7 +109,10 @@
   #entertain .mpL {
     padding-top:.3rem;
   }
-   #entertain .mpR {
+  #entertain .mpR {
     padding-bottom:.3rem;
+  }
+  #entertain .mp-swiper {
+    min-height: 3.5rem;
   }
 </style>

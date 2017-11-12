@@ -7,6 +7,7 @@ import Details from '@/pages/details/details'
 import Reserve from '@/pages/reserve/reserve'
 import Tourism from '@/pages/tourism/tourism'
 import List from '@/pages/list/List'
+import Maper from '@/pages/map/map'
 
 Vue.use(Router)
 
@@ -45,6 +46,11 @@ export default new Router({
 	    path: '/list',
 	    name: 'List',
 	    component: List
+    },
+    {
+      path: '/map',
+      name: 'Maper',
+      component: Maper
     }
   ]
 })

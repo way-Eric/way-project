@@ -1,6 +1,6 @@
 <template>
     <div class="head">
-      <a href="#" class="head-left iconfont icon-back"></a>
+      <router-link to="/map" class="head-left iconfont icon-back"></router-link>
       <router-link to="/search"class="head-mid"><span class="iconfont icon-sousuo"></span>输入城市/景点/游玩主题</router-link>
       <router-link to="/city" class="head-right">{{city}}</router-link>
     </div>
@@ -76,6 +76,10 @@
     color: #fff;
     padding: 0 .5rem 0 .25rem;
     position: relative;
+    max-width: 1.2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .head-right:after{
   	position: absolute;

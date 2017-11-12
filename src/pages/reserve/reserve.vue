@@ -18,13 +18,12 @@ import main from "./components/main.vue";
 import bottom from "./components/bottom.vue";
 import axios from "axios";
 import { AJAX_GET_DATA } from "./types.js";
-
 export default {
   components: {
     "index-header" : header,
     "index-comment" : comment,
     "index-main" : main ,
-    "index-bottom" : bottom 
+    "index-bottom" : bottom ,
   },
   computed:{
     items() {

@@ -36,6 +36,12 @@
 				</li>
 			</ul>
 		</div>
+    <div class="map">
+      <h3>三亚地图</h3>
+      <router-link to="/map" class="map-box">
+        <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1767269540,4273231354&fm=27&gp=0.jpg" alt="地图">
+      </router-link>
+    </div>
     </div>
 </template>
 
@@ -161,7 +167,7 @@
     overflow: hidden;
   }
   .arrange h3 {
-	color: #616161;
+	  color: #616161;
     font-size: .4rem;
     margin: .3rem 0 0 0;
   }
@@ -221,5 +227,20 @@
   }
   .Trip {
     height:0.86rem;
+  }
+  .map h3{
+    color: #616161;
+    font-size: .4rem;
+    margin: .3rem 0 .2rem 0;
+  }
+  .map .map-box {
+    display: block;
+    width: 100%;
+    height: 60%;
+    padding-bottom: .1rem
+  }
+  .map-box img {
+    width: 100%;
+    height: 100%;
   }
 </style>
