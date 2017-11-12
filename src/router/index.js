@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/home/Home'
+import Home from '@/pages/home/home'
 import Search from '@/pages/search/search'
 import City from '@/pages/city/city'
 import Details from '@/pages/details/details'
