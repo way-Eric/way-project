@@ -1,96 +1,77 @@
 <template>
-    <div id="carrousel">
-        <swiper :options="swiperOption" ref="mySwiper">
-            <swiper-slide>
-                <ul class="spot-inner">
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                    <li class="spot-inner-con">
-                        <span class="spot-inner-item">八达岭长城</span>
-                    </li>
-                </ul>
-            </swiper-slide>
-        </swiper>
+    <div id="wrapper">
+        <div id="scroller">
+            <ul class="spot-inner">
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">八达岭长城</span>
+                </li>
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">八达岭长城</span>
+                </li>
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">八达岭长城</span>
+                </li>
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">八达岭长城</span>
+                </li>
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">八达岭长城</span>
+                </li>
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">八达岭长城</span>
+                </li>
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">八达岭长城</span>
+                </li>
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">八达岭长城</span>
+                </li>
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">八达岭长城</span>
+                </li>
+                <li class="spot-inner-con">
+                    <span class="spot-inner-item">慕田峪长城</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
 <script>
-import { swiper, swiperSlide } from 'vue-awesome-swiper';
+    require('../../../utils/iscroll-probe.js')
     export default {
-        name: 'carrousel',
-    data() {
-        return {
-            swiperOption: {
-                autoplay: 1000,
-                direction: 'horizontal',
-                grabCursor: true,
-                setWrapperSize: true,
-                autoHeight: true,
-                pagination: '.swiper-pagination',
-                observeParents: true,
-            }
+        mounted() {
+            this.creatScroll()            
+        },
+        methods: {
+            creatScroll() {
+                this.myScroll = new IScroll('#wrapper', { scrollX: true, scrollY: false, mouseWheel: true });
+                console.log(this.myScroll)
+            }            
         }
-    },
-    computed: {
-        swiper() {
-            return this.$refs.mySwiper.swiper
-        }
-    },
-    components: {
-        swiper,
-        swiperSlide
     }
-}
 </script>
 
 <style scoped>
     
-    #carrousel {
-      height: .8rem;
-      background: #e5e7e8;
-    }
-    #carrousel .swiper-container {
+    #wrapper { 
+        width:100%;
+        padding: .1rem .1rem;
+        overflow: hidden;
         background: #e5e7e8;
     }
-    .swiper-slide {
-        margin-right: .6rem;
-        height: .68rem;
-        max-height: 6rem;
-        padding: .08rem .12rem;
+    #scroller {
+        width: 19rem;
+        float: left;
     }
     .spot-inner {
-        height: .64rem;
-        width: 3000px;
+        float: left;
+        white-space: nowrap;
     }
     .spot-inner-con {
         float: left;
-        position: relative;
         padding: .04rem .08rem;
+        display: inline-block;
     }
     .spot-inner-item {
         display: block;
