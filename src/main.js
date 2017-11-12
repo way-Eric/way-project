@@ -2,15 +2,17 @@ import Vue from 'vue'
 import App from './app/App'
 import router from './router'
 import FastClick from 'fastclick'
+import store from './vuex'
+import VuePaginate from 'vue-paginate'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
+Vue.use(VuePaginate)
 FastClick.attach(document.body)
-Vue.use(VueAwesomeSwiper)
-Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
