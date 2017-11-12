@@ -2,6 +2,7 @@
 	<div class="item-con">
         <paginate class="view-list page" ref="paginator" name="listInfo" :list="listInfo" :per="per">
 		<div class="list-info" v-for="(item, index) in paginated('listInfo')" :key="item.id">
+            <router-link to="/details">
 			<div class="list-info-con">
 				<div class="list-info-title">
 					<div class="title-left">
@@ -31,6 +32,7 @@
 					<h4>{{item.ticketSec}}</h4>
 					<span>&yen; <em>{{item.priceSec}}</em></span>
 				</div>
+                </router-link>
 		</div>
         </paginate>
         <div class="moreinfo">
