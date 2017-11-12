@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import header from "./header.vue";
-import banner from "./banner.vue";
-import entertain from "./entertain.vue";
-import middle from "./middle.vue";
-import main from "./main.vue";
+import header from "./components/header.vue";
+import banner from "./components/banner.vue";
+import entertain from "./components/entertain.vue";
+import middle from "./components/middle.vue";
+import main from "./components/main.vue";
 export default {
   components: {
     "index-header" : header,
