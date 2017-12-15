@@ -5,15 +5,15 @@
       <swiper-slide>
         <div class="mp-category mpL">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票aaa</a>
+          <a href="#" class="mp-category-title">景点门票</a>
         </div>
         <div class="mp-category mpL">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png" alt=""></a>
-          <a href="#" class="mp-category-title">动植物园aaa</a>
+          <a href="#" class="mp-category-title">动植物园</a>
         </div>
         <div class="mp-category mpL">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png" alt=""></a>
-          <a href="#" class="mp-category-title">故宫aaa</a>
+          <a href="#" class="mp-category-title">故宫</a>
         </div>
         <div class="mp-category mpL">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png" alt=""></a>

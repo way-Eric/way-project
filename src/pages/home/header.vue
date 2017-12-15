@@ -1,7 +1,7 @@
 <template>
     <div class="head">
       <a href="#" class="head-left iconfont icon-back"></a>
-      <a href="#" class="head-mid"><span class="iconfont icon-sousuo"></span>输入城市/景点/游玩主题aaaaa</a>
+      <a href="#" class="head-mid"><span class="iconfont icon-sousuo"></span>输入城市/景点/游玩主题</a>
       <a href="#" class="head-right">北京</a>
     </div>
 </template>
