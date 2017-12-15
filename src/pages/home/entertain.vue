@@ -63,7 +63,7 @@
         </div>
         <div class="mp-category mpR">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
+          <a href="#" class="mp-category-title">景点门票aa</a>
         </div>
         <div class="mp-category mpR">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png" alt=""></a>
