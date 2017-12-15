@@ -5,15 +5,15 @@
       <swiper-slide>
         <div class="mp-category mpL">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png" alt=""></a>
-          <a href="#" class="mp-category-title">景点门票</a>
+          <a href="#" class="mp-category-title">景点门票aaa</a>
         </div>
         <div class="mp-category mpL">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png" alt=""></a>
-          <a href="#" class="mp-category-title">动植物园</a>
+          <a href="#" class="mp-category-title">动植物园aaa</a>
         </div>
         <div class="mp-category mpL">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png" alt=""></a>
-          <a href="#" class="mp-category-title">故宫</a>
+          <a href="#" class="mp-category-title">故宫aaa</a>
         </div>
         <div class="mp-category mpL">
           <a href="#" class="mp-category-img"><img src="http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png" alt=""></a>
@@ -128,7 +128,7 @@
     height:1.3rem;
     padding:.15rem 0;
     float:left ;
-  } 
+  }
   .mp-category-img img{
     width:.66rem;
     height:.66rem;
@@ -138,7 +138,7 @@
     font-size:.14rem;
     text-align: center;
     line-height:.5rem ;
-  } 
+  }
   #entertain a {
     display:block;
     color:#333;
