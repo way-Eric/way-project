@@ -5,7 +5,7 @@ import FastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 FastClick.attach(document.body)
-
+Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 
 new Vue({
