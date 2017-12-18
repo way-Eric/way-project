@@ -76,9 +76,15 @@
   </div>
 </template>
 
-<script>
+<script scoped>
+
+    import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
     export default {
+      components: {
+        swiper,
+        swiperSlide
+      },
       name: 'carrousel',
       data() {
         return {
@@ -124,10 +130,9 @@
     float:left ;
   }
   .mp-category-img img{
-    display: block;
     width:.66rem;
     height:.66rem;
-    margin:0 auto;
+    margin-left:.6rem;
   }
   .mp-category-title {
     font-size:.14rem;
